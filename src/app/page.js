@@ -68,11 +68,16 @@ const inputCheckBoxStyleErr = {
   };
 
   const login = () => {
-    if (checkUsernameValidation(username) && checkPasswordValidation(password)) {
-      setIsLoggedIn(true);
-    } else {
-      alert("Check input and try again");
-    }
+    const isUsernameValid = checkUsernameValidation(username);
+    const isPasswordValid = checkPasswordValidation(password);
+
+    if (!isUsernameValid && !isPasswordValid) {
+      alert("check your user and password inputs")
+    }else if (!isUsernameValid) {
+      alert("check your Username inputs")
+    }else if (!isPasswordValid) {
+      alert("check your password and try again")
+    }else{setIsLoggedIn(true)}
   };
 
   const logout = () => {
