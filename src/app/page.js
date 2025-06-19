@@ -30,7 +30,7 @@ const inputCheckBoxStyleErr = {
 
   const checkUsernameValidation = (name) => {
     const hasNoSymbol = /^[a-zA-Z0-9]*$/.test(name);
-    const greaterThanSix = username.length > 6;
+    const greaterThanSix = name.length > 6;
     // Check if username is greater than 6
     // check if username has no character
     setGreaterThanSixErr(greaterThanSix);
